@@ -7,9 +7,16 @@
 
 This is a small helper Go library and command that we use at Buf to make it so that `private` packages within our Go libraries cannot be used outside of `github.com/bufbuild` or `buf.build/go` packages. This is our mechanism to make packages internal to our organization. This allows us to do breaking changes on organization-wide packages while knowing that no one will depend on them (and potentially have breaking changes in their code).
 
+### Usage
+
+```
+go install buf.build/go/bufprivateusage/cmd/bufprivateusage
+bufprivateusage ./private/...
+```
+
 ## Status: Alpha
 
-This library will never be generally available, and is not stable. By design, you should not use this.
+This library will never be generally available, and is not stable. By design, you should not use this unless you are developing libraries within `github.com/bufbuild` or `buf.build/go`.
 
 ## Legal
 
