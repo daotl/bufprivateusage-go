@@ -1,0 +1,6 @@
+buf.build/go/app v0.1.0 h1:nlqD/h0rhIN73ZoiDElprrPiO2N6JV+RmNK34K29Ihg=
+buf.build/go/app v0.1.0/go.mod h1:0XVOYemubVbxNXVY0DnsVgWeGkcbbAvjDa1fmhBC+Wo=
+buf.build/go/interrupt v1.1.0 h1:olBuhgv9Sav4/9pkSLoxgiOsZDgM5VhRhvRpn3DL0lE=
+buf.build/go/interrupt v1.1.0/go.mod h1:ql56nXPG1oHlvZa6efNC7SKAQ/tUjS6z0mhJl0gyeRM=
+buf.build/go/standard v0.1.0 h1:g98T9IyvAl0vS3Pq8iVk6Cvj2ZiFvoUJRtfyGa0120U=
+buf.build/go/standard v0.1.0/go.mod h1:PiqpHz/7ZFq+kqvYhc/SK3lxFIB9N/aiH2CFC2JHIQg=
