@@ -32,7 +32,7 @@ import (
 const genFileName = "usage.gen.go"
 
 func main() {
-	app.Main(context.Background(), run)
+	// app.Main(context.Background(), run)
 }
 
 func run(ctx context.Context, container app.Container) error {

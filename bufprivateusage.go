@@ -14,35 +14,35 @@
 
 package bufprivateusage
 
-import (
-	"errors"
-	"fmt"
-	"os"
-	"path/filepath"
-	"runtime/debug"
-	"strings"
-)
+// import (
+// 	"errors"
+// 	"fmt"
+// 	"os"
+// 	"path/filepath"
+// 	"runtime/debug"
+// 	"strings"
+// )
 
-const debugBinPrefix = "__debug_bin"
+// const debugBinPrefix = "__debug_bin"
 
-func init() {
-	if err := check(); err != nil {
-		panic(err.Error())
-	}
-}
+// func init() {
+// 	if err := check(); err != nil {
+// 		panic(err.Error())
+// 	}
+// }
 
-func check() error {
-	buildInfo, ok := debug.ReadBuildInfo()
-	if !ok || buildInfo.Main.Path == "" {
-		// Detect and allow *.test and __debug_bin* files.
-		if !strings.HasSuffix(os.Args[0], testSuffix) && !strings.HasPrefix(filepath.Base(os.Args[0]), debugBinPrefix) {
-			return errors.New("This code must only be imported by github.com/bufbuild and buf.build/go projects.")
-		}
-		return nil
-	}
-	if !strings.HasPrefix(buildInfo.Main.Path, "github.com/bufbuild") &&
-		!strings.HasPrefix(buildInfo.Main.Path, "buf.build/go") {
-		return fmt.Errorf("This code must only be imported by github.com/bufbuild and buf.build/go projects but was used in %s.", buildInfo.Main.Path)
-	}
-	return nil
-}
+// func check() error {
+// 	buildInfo, ok := debug.ReadBuildInfo()
+// 	if !ok || buildInfo.Main.Path == "" {
+// 		// Detect and allow *.test and __debug_bin* files.
+// 		if !strings.HasSuffix(os.Args[0], testSuffix) && !strings.HasPrefix(filepath.Base(os.Args[0]), debugBinPrefix) {
+// 			return errors.New("This code must only be imported by github.com/bufbuild and buf.build/go projects.")
+// 		}
+// 		return nil
+// 	}
+// 	if !strings.HasPrefix(buildInfo.Main.Path, "github.com/bufbuild") &&
+// 		!strings.HasPrefix(buildInfo.Main.Path, "buf.build/go") {
+// 		return fmt.Errorf("This code must only be imported by github.com/bufbuild and buf.build/go projects but was used in %s.", buildInfo.Main.Path)
+// 	}
+// 	return nil
+// }
