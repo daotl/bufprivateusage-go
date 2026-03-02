@@ -1,4 +1,4 @@
-module buf.build/go/bufprivateusage
+module github.com/daotl/bufprivateusage-go
 
 go 1.24.0
 
